@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   padding: 0px;
@@ -114,7 +115,6 @@ legend {
 }
 
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -130,16 +130,34 @@ h1 {
   font-weight: 400;
   line-height: 58px;
   word-wrap: break-word;
+  max-width: 405px;
 }
 
+/* ----------------Шапка-------------------------------*/
 .header {
   background: #ede6dd;
 }
-.header .header__wrapper {
+@media (max-width: 1200px) {
+  .header .container {
+    max-width: 1140px;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 767px) {
+  .header .container {
+    max-width: 727px;
+    padding: 0 20px;
+  }
+  .header .header__wrapper {
+    gap: 60px;
+  }
+}
+.header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 5px 0;
+  min-height: 112px;
 }
 .header .logo__container {
   width: 128px;
@@ -153,19 +171,16 @@ h1 {
   justify-content: center;
   align-content: space-between;
 }
-.header ul li {
-  flex: 1 1 auto;
-  white-space: nowrap;
-}
 .header ul li a {
   color: #1e1928;
   font-size: 14px;
   font-family: Inter;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 143%;
   word-wrap: break-word;
 }
 
+/* ----------------BODY-------------------------------*/
 .greetings {
   background: #ede6dd;
 }
@@ -176,11 +191,13 @@ h1 {
   position: absolute;
   top: 153px;
   left: 668px;
+  max-width: 100%;
 }
 .greetings .img__trees {
   position: absolute;
   top: 368px;
   left: 1046px;
+  max-width: 100%;
 }
 .greetings h1 {
   padding: 80px 0 24px 0;
@@ -194,6 +211,7 @@ h1 {
   letter-spacing: 0.25px;
   word-wrap: break-word;
   margin: 0 0 32px 0;
+  max-width: 533px;
 }
 .greetings span {
   color: #1e1928;
@@ -268,6 +286,8 @@ h1 {
   letter-spacing: 0.25px;
   word-wrap: break-word;
   padding: 0 0 20px 0;
+  margin: 0 auto;
+  max-width: 653px;
 }
 .relief button {
   border-radius: 9999px;
@@ -287,22 +307,24 @@ h1 {
 .principle__wrapper {
   position: relative;
   display: flex;
-  gap: 306px;
   padding: 270px 0 79px 0;
 }
 .principle__container__img1 {
   position: absolute;
   bottom: -240px;
   left: -120px;
+  max-width: 100%;
 }
 .principle__container__img2 {
   position: absolute;
   bottom: -240px;
   left: -120px;
+  max-width: 100%;
 }
 .principle .right__box {
   display: flex;
   gap: 24px;
+  max-width: 600px;
 }
 .principle .left__inner__box {
   display: flex;
@@ -377,6 +399,7 @@ h1 {
 .plus li:first-child img:last-child {
   position: absolute;
   right: 103px;
+  max-width: 100%;
 }
 .plus li:nth-child(2) {
   flex-direction: row-reverse;
@@ -385,6 +408,7 @@ h1 {
 .plus li:nth-child(2) img:last-child {
   position: absolute;
   left: 26px;
+  max-width: 100%;
 }
 .plus li:nth-child(4) {
   flex-direction: row-reverse;
@@ -394,6 +418,7 @@ h1 {
   position: absolute;
   left: 0;
   z-index: -1;
+  max-width: 100%;
 }
 .plus li p {
   color: rgba(30, 25, 40, 0.8);
@@ -455,6 +480,7 @@ h1 {
 .library .big__ul_img {
   text-align: center;
   margin: 0 auto;
+  max-width: 100%;
 }
 .library .library__button {
   color: #1e1928;
@@ -500,6 +526,8 @@ h1 {
   line-height: 30px;
   letter-spacing: 0.25px;
   word-wrap: break-word;
+  margin: 0 auto;
+  max-width: 654px;
 }
 
 .reviews {
@@ -570,6 +598,7 @@ h1 {
 }
 .partners .container__img {
   padding: 24px 29px;
+  max-width: 100%;
 }
 
 .interest {
@@ -682,12 +711,12 @@ footer .external__flex1 .left__inner_flex {
   word-wrap: break-word;
   gap: 182px;
 }
-footer .external__flex1 .left__inner_flex ul {
+footer .external__flex1 ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-footer .external__flex1 .left__inner_flex li:first-child {
+footer .external__flex1 li:first-child {
   color: #1e1928;
   font-size: 17px;
   font-family: Inter;
@@ -696,12 +725,12 @@ footer .external__flex1 .left__inner_flex li:first-child {
   letter-spacing: 0.25px;
   word-wrap: break-word;
 }
-footer .external__flex1 .right__inner_flex {
+footer .right__inner_flex {
   display: flex;
   gap: 16px;
   align-items: flex-start;
 }
-footer .external__flex1 .right__inner_flex button {
+footer .right__inner_flex button {
   background: #1e1928;
   border-radius: 9999px;
   color: #f4efe9;
@@ -712,11 +741,11 @@ footer .external__flex1 .right__inner_flex button {
   word-wrap: break-word;
   padding: 10px 32px;
 }
-footer .external__flex1 .right__inner_flex img {
-  width: 40px;
-  height: 40px;
+footer .right__inner_flex img {
+  max-width: 100%;
 }
-footer .external__flex2 {
+
+.external__flex2 {
   display: flex;
   justify-content: space-between;
   padding: 0 0 16px 0;
@@ -728,11 +757,18 @@ footer .external__flex2 {
   letter-spacing: 0.08px;
   word-wrap: break-word;
 }
-footer .external__flex2 .right__inner {
+.external__flex2 p {
+  max-width: 665px;
+}
+.external__flex2 .right__inner {
   display: flex;
   gap: 16px;
 }
-footer .external__flex3 {
+.external__flex2 .right__inner img {
+  max-width: 100%;
+}
+
+.external__flex3 {
   display: flex;
   justify-content: space-between;
   color: rgba(30, 25, 40, 0.64);
@@ -742,7 +778,7 @@ footer .external__flex3 {
   line-height: 20px;
   word-wrap: break-word;
 }
-footer .external__flex3 p:last-child {
+.external__flex3 p:last-child {
   color: rgba(30, 25, 40, 0.64);
   font-size: 12px;
   font-family: Inter;
